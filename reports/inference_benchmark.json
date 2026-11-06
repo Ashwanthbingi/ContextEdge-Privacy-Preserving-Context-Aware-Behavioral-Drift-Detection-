@@ -1,0 +1,30 @@
+{
+  "source": "synthetic",
+  "name": "Paced local CPU inference resource benchmark",
+  "created_at": 1793958191.0423267,
+  "duration_seconds": 15.000508300028741,
+  "interval_seconds": 0.25,
+  "inference_latency": {
+    "count": 60,
+    "mean_ms": 4.952461656648666,
+    "p50_ms": 4.956200020387769,
+    "p95_ms": 5.645755073055624,
+    "max_ms": 5.863900063559413
+  },
+  "process_cpu_percent_one_core": null,
+  "process_cpu_percent_machine": null,
+  "cpu_counter_delta_seconds": 0.0,
+  "stdlib_process_time_delta_seconds": 0.0,
+  "rss_mean_mb": 333.89088541666666,
+  "rss_peak_mb": 333.90625,
+  "model_bytes": 366107,
+  "onnx_bytes": 21418,
+  "profile_context": "Coding",
+  "profile_version": 1,
+  "limitations": [
+    "Actual hardware measurements on synthetic-trained models and synthetic inputs.",
+    "Four inferences/second by default; excludes collector, SQLite writes, dashboard and training.",
+    "Includes Python/ML process memory; not a real-world accuracy experiment.",
+    "Zero CPU counter deltas are reported as unavailable, not zero-cost inference; Windows accounting may miss short paced bursts."
+  ]
+}

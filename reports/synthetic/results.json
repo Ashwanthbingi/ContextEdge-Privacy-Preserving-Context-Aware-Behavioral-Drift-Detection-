@@ -1,0 +1,401 @@
+{
+  "source": "synthetic",
+  "name": "12 controlled ContextEdge scenarios",
+  "seed": 42,
+  "created_at": 1793957873.7098794,
+  "settings": {
+    "sampling_interval": 2.0,
+    "feature_window": 8,
+    "sequence_length": 12,
+    "min_calibration_samples": 240,
+    "min_validation_samples": 50,
+    "false_alarm_alpha": 0.05,
+    "temporal_epochs": 18,
+    "temporal_hidden": 16,
+    "temporal_weight": 0.5,
+    "persistence_window": 30,
+    "min_persistence": 12,
+    "persistence_ratio": 0.8,
+    "drift_confirmation": "either",
+    "adwin_delta": 0.002,
+    "page_hinkley_threshold": 8.0,
+    "page_hinkley_delta": 0.005,
+    "context_grace": 4,
+    "max_context_gap_seconds": 120.0,
+    "retention_days": 30,
+    "foreground_enabled": false,
+    "auto_adapt": false,
+    "adaptation_samples": 240,
+    "adaptation_stability_limit": 0.8,
+    "random_seed": 42
+  },
+  "python": "3.11.16",
+  "artifact_directory": "E:\\edge AI project\\reports\\synthetic\\run-1793957821756033300",
+  "ai": {
+    "precision": 0.6673866090712743,
+    "recall": 1.0,
+    "f1": 0.8005181347150259,
+    "false_positive_rate": 0.07954545454545454,
+    "tp": 309,
+    "fp": 154,
+    "tn": 1782,
+    "fn": 0,
+    "observations": 2245
+  },
+  "drift": {
+    "false_drift_observation_rate": 0.013367609254498715,
+    "false_drift_scenario_rate": 0.2727272727272727,
+    "detected_persistent_scenarios": 4,
+    "persistent_scenarios": 4,
+    "adaptation_time_simulated_seconds": [
+      478.0
+    ]
+  },
+  "inference_latency": {
+    "count": 2901,
+    "mean_ms": 4.614473286995607,
+    "p50_ms": 4.570400109514594,
+    "p95_ms": 5.330299958586693,
+    "max_ms": 7.252099923789501
+  },
+  "model_sizes": {
+    "Idle": {
+      "total_bytes": 392539,
+      "onnx_bytes": 21418
+    },
+    "Coding": {
+      "total_bytes": 366107,
+      "onnx_bytes": 21418
+    },
+    "Browsing": {
+      "total_bytes": 388178,
+      "onnx_bytes": 21418
+    },
+    "Media": {
+      "total_bytes": 372627,
+      "onnx_bytes": 21418
+    },
+    "High-compute": {
+      "total_bytes": 384120,
+      "onnx_bytes": 21418
+    }
+  },
+  "onnx_parity": {
+    "Idle": {
+      "passed": true,
+      "max_absolute_error": 2.384185791015625e-07,
+      "sequences": 12,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "Coding": {
+      "passed": true,
+      "max_absolute_error": 2.0116567611694336e-07,
+      "sequences": 12,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "Browsing": {
+      "passed": true,
+      "max_absolute_error": 1.7881393432617188e-07,
+      "sequences": 12,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "Media": {
+      "passed": true,
+      "max_absolute_error": 1.7881393432617188e-07,
+      "sequences": 12,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    },
+    "High-compute": {
+      "passed": true,
+      "max_absolute_error": 1.4901161193847656e-07,
+      "sequences": 12,
+      "atol": 1e-05,
+      "rtol": 0.0001
+    }
+  },
+  "training_seconds": {
+    "Idle": 2.6440600999630988,
+    "Coding": 1.1649340998847038,
+    "Browsing": 1.1492830000352114,
+    "Media": 1.2058254999574274,
+    "High-compute": 1.1876685000024736
+  },
+  "scenarios": [
+    {
+      "scenario": "normal_coding",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.017045454545454544,
+        "tp": 0,
+        "fp": 3,
+        "tn": 173,
+        "fn": 0,
+        "observations": 176
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "normal_browsing",
+      "context": "Browsing",
+      "ai": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.03977272727272727,
+        "tp": 0,
+        "fp": 7,
+        "tn": 169,
+        "fn": 0,
+        "observations": 176
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "normal_media",
+      "context": "Media",
+      "ai": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.017045454545454544,
+        "tp": 0,
+        "fp": 3,
+        "tn": 173,
+        "fn": 0,
+        "observations": 176
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "normal_idle",
+      "context": "Idle",
+      "ai": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0625,
+        "tp": 0,
+        "fp": 11,
+        "tn": 165,
+        "fn": 0,
+        "observations": 176
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "normal_high_compute",
+      "context": "High-compute",
+      "ai": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.005681818181818182,
+        "tp": 0,
+        "fp": 1,
+        "tn": 175,
+        "fn": 0,
+        "observations": 176
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "short_cpu_spike",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.15789473684210525,
+        "recall": 1.0,
+        "f1": 0.2727272727272727,
+        "false_positive_rate": 0.09090909090909091,
+        "tp": 3,
+        "fp": 16,
+        "tn": 160,
+        "fn": 0,
+        "observations": 179
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "short_memory_spike",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.1875,
+        "recall": 1.0,
+        "f1": 0.3157894736842105,
+        "false_positive_rate": 0.07386363636363637,
+        "tp": 3,
+        "fp": 13,
+        "tn": 163,
+        "fn": 0,
+        "observations": 179
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "temporary_disk_network",
+      "context": "Browsing",
+      "ai": {
+        "precision": 0.061224489795918366,
+        "recall": 1.0,
+        "f1": 0.11538461538461539,
+        "false_positive_rate": 0.26136363636363635,
+        "tp": 3,
+        "fp": 46,
+        "tn": 130,
+        "fn": 0,
+        "observations": 179
+      },
+      "persistent_change_expected": false,
+      "detection_delay_seconds": null,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "sustained_cpu_change",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.8130081300813008,
+        "recall": 1.0,
+        "f1": 0.8968609865470852,
+        "false_positive_rate": 0.13068181818181818,
+        "tp": 100,
+        "fp": 23,
+        "tn": 153,
+        "fn": 0,
+        "observations": 276
+      },
+      "persistent_change_expected": true,
+      "detection_delay_seconds": 58.0,
+      "false_drift_observation_rate": 0.06818181818181818,
+      "false_drift_observations": 12,
+      "has_false_drift": true,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "sustained_memory_change",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.8547008547008547,
+        "recall": 1.0,
+        "f1": 0.9216589861751152,
+        "false_positive_rate": 0.09659090909090909,
+        "tp": 100,
+        "fp": 17,
+        "tn": 159,
+        "fn": 0,
+        "observations": 276
+      },
+      "persistent_change_expected": true,
+      "detection_delay_seconds": 58.0,
+      "false_drift_observation_rate": 0.03977272727272727,
+      "false_drift_observations": 7,
+      "has_false_drift": true,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "sudden_context_profile_change",
+      "context": "Media",
+      "ai": {
+        "precision": 0.8771929824561403,
+        "recall": 1.0,
+        "f1": 0.9345794392523364,
+        "false_positive_rate": 0.07954545454545454,
+        "tp": 100,
+        "fp": 14,
+        "tn": 162,
+        "fn": 0,
+        "observations": 276
+      },
+      "persistent_change_expected": true,
+      "detection_delay_seconds": 58.0,
+      "false_drift_observation_rate": 0.03977272727272727,
+      "false_drift_observations": 7,
+      "has_false_drift": true,
+      "adaptation_accepted": false,
+      "adaptation_time_simulated_seconds": null
+    },
+    {
+      "scenario": "legitimate_change_adaptation",
+      "context": "Coding",
+      "ai": {
+        "precision": 0.8978102189781022,
+        "recall": 1.0,
+        "f1": 0.9461538461538461,
+        "false_positive_rate": 0.14634146341463414,
+        "tp": 369,
+        "fp": 42,
+        "tn": 245,
+        "fn": 0,
+        "observations": 656
+      },
+      "persistent_change_expected": true,
+      "detection_delay_seconds": 58.0,
+      "false_drift_observation_rate": 0.0,
+      "false_drift_observations": 0,
+      "has_false_drift": false,
+      "adaptation_accepted": true,
+      "adaptation_time_simulated_seconds": 478.0
+    }
+  ],
+  "limitations": [
+    "Synthetic generative distributions; not real-world detection accuracy.",
+    "Oracle manual context labels: context recognition accuracy is not measured here.",
+    "Correlated overlapping windows violate exchangeability; alpha is an empirical target.",
+    "Ground truth marks raw injected intervals; feature/sequence tails can count as false positives.",
+    "Detection delay and adaptation duration use simulated sample time, not execution time.",
+    "Adaptation scenario excluded from aggregate AI scores because its baseline and ground truth change; returning to the original regime is a new labelled change."
+  ]
+}

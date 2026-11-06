@@ -1,0 +1,38 @@
+{
+  "source": "real_laptop",
+  "name": "Local monitoring resource benchmark",
+  "created_at": 1793958019.4908013,
+  "duration_seconds": 30.00068229995668,
+  "requested_seconds": 30.0,
+  "observations": 14,
+  "sampling_interval_seconds": 2.0,
+  "observed_mean_interval_seconds": 1.9776706328758826,
+  "process_cpu_percent_one_core": 2.0832859524694958,
+  "process_cpu_percent_machine": 0.13020537202934349,
+  "system_cpu_mean_percent": 8.753333333333334,
+  "rss_mean_mb": 331.8365234375,
+  "rss_peak_mb": 332.20703125,
+  "inference_latency": {
+    "count": 0,
+    "mean_ms": null,
+    "p50_ms": null,
+    "p95_ms": null,
+    "max_ms": null
+  },
+  "deployment_model_bytes": 0,
+  "logical_cores": 16,
+  "platform": "Windows",
+  "python": "3.11.16",
+  "error": null,
+  "limitations": [
+    "Short local run; resource usage depends on other laptop workloads.",
+    "CPU is process user+system time; machine-normalized CPU divides by logical cores.",
+    "RSS includes loaded Python, Streamlit-independent engine and ML libraries.",
+    "No labelled real behaviour: precision, recall and drift accuracy are not measured.",
+    "No inference latency is reported unless an actually trained context model was used."
+  ],
+  "last_observation": {
+    "context": "Idle",
+    "classification": "WARM-UP / UNCALIBRATED"
+  }
+}

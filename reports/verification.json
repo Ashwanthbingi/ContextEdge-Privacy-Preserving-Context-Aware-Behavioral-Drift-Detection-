@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-11-06T09:48:18.096781+00:00",
+  "tests": {
+    "tests": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 24.073
+  },
+  "synthetic_ai": {
+    "precision": 0.6673866090712743,
+    "recall": 1.0,
+    "f1": 0.8005181347150259,
+    "false_positive_rate": 0.07954545454545454,
+    "tp": 309,
+    "fp": 154,
+    "tn": 1782,
+    "fn": 0,
+    "observations": 2245
+  },
+  "synthetic_drift": {
+    "false_drift_observation_rate": 0.013367609254498715,
+    "false_drift_scenario_rate": 0.2727272727272727,
+    "detected_persistent_scenarios": 4,
+    "persistent_scenarios": 4,
+    "adaptation_time_simulated_seconds": [
+      478.0
+    ]
+  },
+  "laptop_monitoring": {
+    "source": "real_laptop",
+    "name": "Local monitoring resource benchmark",
+    "created_at": 1793958019.4908013,
+    "duration_seconds": 30.00068229995668,
+    "requested_seconds": 30.0,
+    "observations": 14,
+    "sampling_interval_seconds": 2.0,
+    "observed_mean_interval_seconds": 1.9776706328758826,
+    "process_cpu_percent_one_core": 2.0832859524694958,
+    "process_cpu_percent_machine": 0.13020537202934349,
+    "system_cpu_mean_percent": 8.753333333333334,
+    "rss_mean_mb": 331.8365234375,
+    "rss_peak_mb": 332.20703125,
+    "inference_latency": {
+      "count": 0,
+      "mean_ms": null,
+      "p50_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    "deployment_model_bytes": 0,
+    "logical_cores": 16,
+    "platform": "Windows",
+    "python": "3.11.16",
+    "error": null,
+    "limitations": [
+      "Short local run; resource usage depends on other laptop workloads.",
+      "CPU is process user+system time; machine-normalized CPU divides by logical cores.",
+      "RSS includes loaded Python, Streamlit-independent engine and ML libraries.",
+      "No labelled real behaviour: precision, recall and drift accuracy are not measured.",
+      "No inference latency is reported unless an actually trained context model was used."
+    ],
+    "last_observation": {
+      "context": "Idle",
+      "classification": "WARM-UP / UNCALIBRATED"
+    }
+  },
+  "synthetic_model_inference": {
+    "source": "synthetic",
+    "name": "Paced local CPU inference resource benchmark",
+    "created_at": 1793958191.0423267,
+    "duration_seconds": 15.000508300028741,
+    "interval_seconds": 0.25,
+    "inference_latency": {
+      "count": 60,
+      "mean_ms": 4.952461656648666,
+      "p50_ms": 4.956200020387769,
+      "p95_ms": 5.645755073055624,
+      "max_ms": 5.863900063559413
+    },
+    "process_cpu_percent_one_core": null,
+    "process_cpu_percent_machine": null,
+    "cpu_counter_delta_seconds": 0.0,
+    "stdlib_process_time_delta_seconds": 0.0,
+    "rss_mean_mb": 333.89088541666666,
+    "rss_peak_mb": 333.90625,
+    "model_bytes": 366107,
+    "onnx_bytes": 21418,
+    "profile_context": "Coding",
+    "profile_version": 1,
+    "limitations": [
+      "Actual hardware measurements on synthetic-trained models and synthetic inputs.",
+      "Four inferences/second by default; excludes collector, SQLite writes, dashboard and training.",
+      "Includes Python/ML process memory; not a real-world accuracy experiment.",
+      "Zero CPU counter deltas are reported as unavailable, not zero-cost inference; Windows accounting may miss short paced bursts."
+    ]
+  },
+  "trained_synthetic_contexts": [
+    "Idle",
+    "Coding",
+    "Browsing",
+    "Media",
+    "High-compute"
+  ],
+  "model_sizes": {
+    "Idle": {
+      "total_bytes": 392539,
+      "onnx_bytes": 21418
+    },
+    "Coding": {
+      "total_bytes": 366107,
+      "onnx_bytes": 21418
+    },
+    "Browsing": {
+      "total_bytes": 388178,
+      "onnx_bytes": 21418
+    },
+    "Media": {
+      "total_bytes": 372627,
+      "onnx_bytes": 21418
+    },
+    "High-compute": {
+      "total_bytes": 384120,
+      "onnx_bytes": 21418
+    }
+  },
+  "max_onnx_absolute_error": 2.384185791015625e-07,
+  "artifact_directory": "E:\\edge AI project\\reports\\synthetic\\run-1793957821756033300",
+  "real_user_profiles_trained": false,
+  "browser_visual_check": "Computer-use stopped because active browser URL could not be verified as allowed"
+}

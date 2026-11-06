@@ -1,0 +1,11 @@
+{
+  "http_status": 200,
+  "response": "ok",
+  "data_dir": "C:\\Users\\Aswan\\AppData\\Local\\Temp\\ContextEdge-verified-runtime",
+  "schema_version": 2,
+  "observations_current_schema": 14,
+  "last_context": "Idle",
+  "last_feature_count": 27,
+  "profiles_ready": 0,
+  "monitoring_started": false
+}
